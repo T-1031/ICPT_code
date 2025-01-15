@@ -31,6 +31,7 @@
 #include "sample.h"
 #include "connect.h"
 #include "mathfun.h"
+#include "temp.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -103,6 +104,7 @@ int main(void)
   MX_HRTIM1_Init();
   MX_TIM16_Init();
   MX_USART2_UART_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   LED_R(1);
   LED_G(1);
@@ -110,6 +112,10 @@ int main(void)
   // 初始化 OLED
   OLED_Init();
   OLED_ShowString(1, 2, "Loading...");
+  // 初始化温度传感器
+  TMP_Init();
+  TMP_Alert_Config(80, 75);
+  HAL_TIM_Base_Start_IT(&TMP_TIM);
   // 初始化 ADC
   Init_ADC_Data();
   Init_ADC();

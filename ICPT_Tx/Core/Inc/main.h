@@ -105,6 +105,8 @@ void Error_Handler(void);
 // HRTIM
 #define INVERT_ON HAL_HRTIM_WaveformOutputStart(&hhrtim1, HRTIM_OUTPUT_TA1 | HRTIM_OUTPUT_TA2 | HRTIM_OUTPUT_TB1 | HRTIM_OUTPUT_TB2)
 #define INVERT_OFF HAL_HRTIM_WaveformOutputStop(&hhrtim1, HRTIM_OUTPUT_TA1 | HRTIM_OUTPUT_TA2 | HRTIM_OUTPUT_TB1 | HRTIM_OUTPUT_TB2)
+// TEMP
+#define TMP_TIM htim6
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

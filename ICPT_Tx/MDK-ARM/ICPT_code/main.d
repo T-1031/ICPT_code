@@ -46,3 +46,4 @@ icpt_code\main.o: ../app/include/oled.h
 icpt_code\main.o: ../app/include/sample.h
 icpt_code\main.o: ../app/include/mathfun.h
 icpt_code\main.o: ../app/include/connect.h
+icpt_code\main.o: ../app/include/temp.h

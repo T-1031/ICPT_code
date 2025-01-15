@@ -8,6 +8,7 @@
 
 extern HRTIM_HandleTypeDef hhrtim1;
 extern TIM_HandleTypeDef BUZZER_TIM;
+extern TIM_HandleTypeDef TMP_TIM;
 extern UART_HandleTypeDef huart2;
 extern uint8_t order_hrtim;
 

@@ -36,6 +36,7 @@
 "icpt_code\mathfun.o"
 "icpt_code\oled.o"
 "icpt_code\sample.o"
+"icpt_code\temp.o"
 --strict --scatter "ICPT_code\ICPT_code.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
