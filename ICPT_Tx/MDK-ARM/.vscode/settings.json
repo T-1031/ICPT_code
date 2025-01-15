@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "oled_font.h": "c",
+        "oled.h": "c",
+        "hrtim.h": "c",
+        "main.h": "c",
+        "sample.h": "c",
+        "exit.h": "c",
+        "connect.h": "c",
+        "mathfun.h": "c"
+    }
+}
