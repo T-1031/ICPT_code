@@ -85,8 +85,10 @@ void Error_Handler(void);
 #define BUZZER_GPIO_Port GPIOA
 #define KEY2_Pin GPIO_PIN_4
 #define KEY2_GPIO_Port GPIOB
+#define KEY2_EXTI_IRQn EXTI4_IRQn
 #define KEY1_Pin GPIO_PIN_5
 #define KEY1_GPIO_Port GPIOB
+#define KEY1_EXTI_IRQn EXTI9_5_IRQn
 #define OLED_SCL_Pin GPIO_PIN_6
 #define OLED_SCL_GPIO_Port GPIOB
 #define OLED_SDA_Pin GPIO_PIN_7

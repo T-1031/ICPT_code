@@ -3,18 +3,18 @@
         {
             "name": "ICPT_code",
             "includePath": [
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Core\\Inc",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\STM32F3xx_HAL_Driver\\Inc",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\STM32F3xx_HAL_Driver\\Inc\\Legacy",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\CMSIS\\Device\\ST\\STM32F3xx\\Include",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\CMSIS\\Include",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\app\\include",
-                "D:\\AppT_1001\\keil\\ARM\\ARMCC\\include",
-                "D:\\AppT_1001\\keil\\ARM\\ARMCC\\include\\rw",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\MDK-ARM",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Core\\Src",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\STM32F3xx_HAL_Driver\\Src",
-                "e:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\app"
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Core\\Inc",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\STM32F3xx_HAL_Driver\\Inc",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\STM32F3xx_HAL_Driver\\Inc\\Legacy",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\CMSIS\\Device\\ST\\STM32F3xx\\Include",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\CMSIS\\Include",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\app\\include",
+                "D:\\software\\keil\\KEIL5_MDK\\ARM\\ARMCC\\include",
+                "D:\\software\\keil\\KEIL5_MDK\\ARM\\ARMCC\\include\\rw",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\MDK-ARM",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Core\\Src",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\Drivers\\STM32F3xx_HAL_Driver\\Src",
+                "d:\\rm\\ICPT\\ICPT_code\\ICPT_Tx\\app"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

@@ -4,6 +4,7 @@
 "icpt_code\gpio.o"
 "icpt_code\adc.o"
 "icpt_code\can.o"
+"icpt_code\dma.o"
 "icpt_code\hrtim.o"
 "icpt_code\tim.o"
 "icpt_code\usart.o"
