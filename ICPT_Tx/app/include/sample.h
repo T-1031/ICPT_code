@@ -6,10 +6,10 @@
 #include "mathfun.h"
 
 // ADC矫正参数
-#define CAL_VIN_K 0.007597522f
-#define CAL_VIN_B -15.45663615f
-#define CAL_IIN_K -0.007792031f
-#define CAL_IIN_B 15.81738016f
+#define CAL_VIN_K 20.6f
+#define CAL_VIN_B 0.01f
+#define CAL_IIN_K 3.35f
+#define CAL_IIN_B 0.01f
 
 // 低通滤波系数
 #define VIN_LOWPASS_A 0.08f

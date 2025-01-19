@@ -26,3 +26,8 @@ Reptition Counter 设置为 1，从而得到 REP 中断触发频率为 55 kHz。
 
 ADC1 CH1 采 Vin，ADC2 CH1 采 Iin
 
+VIN = 20.6 * ADC_VIN  
+IIN = 3.35 * ADC_IIN
+
+now_value = K * ADC_Result + B  
+ave_value = now_value * lowpass_a + ave_value * (1 - lowpass_a)
