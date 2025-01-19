@@ -20,6 +20,7 @@
 #include "main.h"
 #include "adc.h"
 #include "can.h"
+#include "dma.h"
 #include "hrtim.h"
 #include "tim.h"
 #include "usart.h"
@@ -98,6 +99,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_CAN_Init();
@@ -115,7 +117,7 @@ int main(void)
   // 初始化温度传感器
   TMP_Init();
   TMP_Alert_Config(80, 75);
-  HAL_TIM_Base_Start_IT(&TMP_TIM);
+  // HAL_TIM_Base_Start_IT(&TMP_TIM);
   // 初始化 ADC
   Init_ADC_Data();
   Init_ADC();
@@ -139,20 +141,20 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    Vin = VIN.ave_value;
-    Iin = IIN.ave_value;
+    Vin = VIN.now_value;
+    Iin = IIN.now_value;
 
     OLED_ShowString(2, 1, "Vin:");
-    OLED_ShowChar(2, 4, Vin >= 0 ? ' ' : '-');
-    OLED_ShowNum(2, 5, Floor(abs(Vin)), 1);
-    OLED_ShowChar(2, 6, '.');
-    OLED_ShowNum(2, 7, Mod1(abs(Vin)), 2);
+    OLED_ShowChar(2, 5, Vin >= 0 ? ' ' : '-');
+    OLED_ShowNum(2, 6, Floor(abs(Vin)), 1);
+    OLED_ShowChar(2, 7, '.');
+    OLED_ShowNum(2, 8, Mod1(abs(Vin)), 2);
 
     OLED_ShowString(3, 1, "Iin:");
-    OLED_ShowChar(3, 4, Iin >= 0 ? ' ' : '-');
-    OLED_ShowNum(3, 5, Floor(abs(Iin)), 1);
-    OLED_ShowChar(3, 6, '.');
-    OLED_ShowNum(3, 7, Mod1(abs(Iin)), 2);
+    OLED_ShowChar(3, 5, Iin >= 0 ? ' ' : '-');
+    OLED_ShowNum(3, 6, Floor(abs(Iin)), 1);
+    OLED_ShowChar(3, 7, '.');
+    OLED_ShowNum(3, 8, Mod1(abs(Iin)), 2);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

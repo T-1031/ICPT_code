@@ -8,14 +8,14 @@ icpt_code\exit.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h
 icpt_code\exit.o: ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f3xx.h
 icpt_code\exit.o: ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f334x8.h
 icpt_code\exit.o: ../Drivers/CMSIS/Include/core_cm4.h
-icpt_code\exit.o: D:\AppT_1001\keil\ARM\ARMCC\Bin\..\include\stdint.h
+icpt_code\exit.o: D:\software\keil\KEIL5_MDK\ARM\ARMCC\Bin\..\include\stdint.h
 icpt_code\exit.o: ../Drivers/CMSIS/Include/cmsis_version.h
 icpt_code\exit.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 icpt_code\exit.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 icpt_code\exit.o: ../Drivers/CMSIS/Device/ST/STM32F3xx/Include/system_stm32f3xx.h
 icpt_code\exit.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h
 icpt_code\exit.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-icpt_code\exit.o: D:\AppT_1001\keil\ARM\ARMCC\Bin\..\include\stddef.h
+icpt_code\exit.o: D:\software\keil\KEIL5_MDK\ARM\ARMCC\Bin\..\include\stddef.h
 icpt_code\exit.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_rcc_ex.h
 icpt_code\exit.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio.h
 icpt_code\exit.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio_ex.h
@@ -40,5 +40,5 @@ icpt_code\exit.o: ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_uart_ex.h
 icpt_code\exit.o: ../app/include/sample.h
 icpt_code\exit.o: ../Core/Inc/adc.h
 icpt_code\exit.o: ../app/include/mathfun.h
-icpt_code\exit.o: D:\AppT_1001\keil\ARM\ARMCC\Bin\..\include\string.h
+icpt_code\exit.o: D:\software\keil\KEIL5_MDK\ARM\ARMCC\Bin\..\include\string.h
 icpt_code\exit.o: ../app/include/connect.h

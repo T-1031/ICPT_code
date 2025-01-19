@@ -48,12 +48,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
        if (on == 0)
        {
             on = 1;
-            BUZZER_ON;
+            INVERT_ON;
+            LED_B(1);
        }
        else
        {
             on = 0;
-            BUZZER_OFF;
+            INVERT_OFF;
+            LED_B(0);
        } 
     }
 }
@@ -78,10 +80,12 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         if (order_hrtim == 0x01)
         {
             INVERT_ON;
+            LED_B(1);
         }
         else if (order_hrtim == 0x00)
         {
             INVERT_OFF;
+            LED_B(0);
         }
     }
     
