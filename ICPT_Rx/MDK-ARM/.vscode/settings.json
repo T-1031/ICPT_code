@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "oled.h": "c",
+        "sample.h": "c",
+        "exit.h": "c"
+    }
+}

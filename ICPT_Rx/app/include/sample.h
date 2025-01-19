@@ -37,7 +37,7 @@ typedef struct
 
 extern uint16_t ADC1_Result;
 extern uint16_t ADC2_Result;
-extern ADC_Data_t VIN, IIN;
+extern ADC_Data_t VDC, IDC;
 
 void Init_ADC(void);
 void Init_ADC_Data(void);

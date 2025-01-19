@@ -2,7 +2,7 @@
 
 uint16_t ADC1_Result;
 uint16_t ADC2_Result;
-__attribute__((section("ccmram"))) ADC_Data_t VIN, IIN;
+__attribute__((section("ccmram"))) ADC_Data_t VDC, IDC;
 
 /// @brief 初始化ADC
 void Init_ADC(void)
@@ -35,8 +35,8 @@ void ADC_Data_Config(ADC_Data_t *ADC_value, uint16_t *ADC_buffer, float proporti
 /// @brief 初始化ADC数据结构体
 void Init_ADC_Data(void)
 {
-	ADC_Data_Config(&VIN, &ADC1_Result, CAL_VIN_K, CAL_VIN_B, VIN_LOWPASS_A, type_voltage);
-	ADC_Data_Config(&IIN, &ADC2_Result, CAL_IIN_K, CAL_IIN_B, IIN_LOWPASS_A, type_voltage);
+	ADC_Data_Config(&VDC, &ADC1_Result, CAL_VIN_K, CAL_VIN_B, VIN_LOWPASS_A, type_voltage);
+	ADC_Data_Config(&IDC, &ADC2_Result, CAL_IIN_K, CAL_IIN_B, IIN_LOWPASS_A, type_voltage);
 }
 
 /// @brief 获取ADC数值
@@ -50,7 +50,7 @@ __attribute__((section("ccmram"))) void Get_ADC(ADC_Data_t *ADC)
 /// @brief 解算ADC数值
 __attribute__((section("ccmram"))) void Resolve_ADC(void)
 {
-	Get_ADC(&VIN);
-	Get_ADC(&IIN);
+	Get_ADC(&VDC);
+	Get_ADC(&IDC);
 }
 

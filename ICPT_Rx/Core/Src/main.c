@@ -19,11 +19,19 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "adc.h"
+#include "can.h"
+#include "dma.h"
+#include "tim.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "oled.h"
+#include "sample.h"
+#include "connect.h"
+#include "mathfun.h"
+#include "temp.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,7 +52,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+// 显示值
+static float Vdc, Idc;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -87,16 +96,54 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
+  MX_TIM6_Init();
+  MX_CAN_Init();
+  MX_TIM16_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  LED_R(1);
+  LED_G(1);
+  LED_B(1);
+  // 初始化 OLED
+  OLED_Init();
+  OLED_ShowString(1, 2, "Loading...");
+  // 初始化温度传感器
+  TMP_Init();
+  TMP_Alert_Config(80, 75);
+  // HAL_TIM_Base_Start_IT(&TMP_TIM);
+  // 初始化 ADC
+  Init_ADC_Data();
+  Init_ADC();
+  // CAN 接收配置
+  CAN_Receive_Config();
+  HAL_Delay(500);
 
+  OLED_Clear();
+  LED_R(0);
+  LED_B(0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    Vdc = VDC.now_value;
+    Idc = IDC.now_value;
+
+    OLED_ShowString(2, 1, "Vdc:");
+    OLED_ShowChar(2, 5, Vdc >= 0 ? ' ' : '-');
+    OLED_ShowNum(2, 6, Floor(abs(Vdc)), 1);
+    OLED_ShowChar(2, 7, '.');
+    OLED_ShowNum(2, 8, Mod1(abs(Vdc)), 2);
+
+    OLED_ShowString(3, 1, "Idc:");
+    OLED_ShowChar(3, 5, Idc >= 0 ? ' ' : '-');
+    OLED_ShowNum(3, 6, Floor(abs(Idc)), 1);
+    OLED_ShowChar(3, 7, '.');
+    OLED_ShowNum(3, 8, Mod1(abs(Idc)), 2);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

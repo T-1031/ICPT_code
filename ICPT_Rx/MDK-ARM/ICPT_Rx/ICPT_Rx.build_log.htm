@@ -1,0 +1,173 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Guo Tian, USTC, LIC=50D7S-LXMBZ-ZEXH2-9A8R9-U7XG7-5SRRQ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.26.2.0
+Toolchain Path:  D:\AppT_1001\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+E:\rm\ICPT\ICPT_code\ICPT_Rx\MDK-ARM\ICPT_Rx.uvprojx
+Project File Date:  01/19/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\AppT_1001\keil\ARM\ARMCC\Bin'
+Build target 'ICPT_Rx'
+assembling startup_stm32f334x8.s...
+compiling stm32f3xx_hal_adc.c...
+compiling can.c...
+compiling stm32f3xx_it.c...
+compiling main.c...
+../Core/Src/main.c(107): warning:  #188-D: enumerated type mixed with another type
+    LED_R(1);
+../Core/Src/main.c(108): warning:  #188-D: enumerated type mixed with another type
+    LED_G(1);
+../Core/Src/main.c(109): warning:  #188-D: enumerated type mixed with another type
+    LED_B(1);
+../Core/Src/main.c(125): warning:  #188-D: enumerated type mixed with another type
+    LED_R(0);
+../Core/Src/main.c(126): warning:  #188-D: enumerated type mixed with another type
+    LED_B(0);
+../Core/Src/main.c: 5 warnings, 0 errors
+compiling adc.c...
+compiling stm32f3xx_hal_msp.c...
+compiling gpio.c...
+compiling tim.c...
+compiling dma.c...
+compiling stm32f3xx_hal.c...
+compiling usart.c...
+compiling stm32f3xx_hal_dma.c...
+compiling stm32f3xx_hal_adc_ex.c...
+compiling stm32f3xx_hal_flash.c...
+compiling stm32f3xx_hal_rcc.c...
+compiling stm32f3xx_hal_cortex.c...
+compiling stm32f3xx_hal_gpio.c...
+compiling stm32f3xx_hal_rcc_ex.c...
+compiling stm32f3xx_hal_pwr.c...
+compiling stm32f3xx_hal_pwr_ex.c...
+compiling stm32f3xx_hal_i2c.c...
+compiling stm32f3xx_hal_i2c_ex.c...
+compiling stm32f3xx_hal_flash_ex.c...
+compiling stm32f3xx_hal_uart_ex.c...
+compiling stm32f3xx_hal_tim_ex.c...
+compiling stm32f3xx_hal_exti.c...
+compiling system_stm32f3xx.c...
+compiling stm32f3xx_hal_can.c...
+compiling stm32f3xx_hal_tim.c...
+compiling stm32f3xx_hal_uart.c...
+compiling temp.c...
+..\app\temp.c(6): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SDA(1);
+..\app\temp.c(7): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SCL(1);
+..\app\temp.c(8): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SDA(0);
+..\app\temp.c(9): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SCL(0);
+..\app\temp.c(15): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SDA(0);
+..\app\temp.c(16): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SCL(1);
+..\app\temp.c(17): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SDA(1);
+..\app\temp.c(26): warning:  #188-D: enumerated type mixed with another type
+          TMP_W_SDA(Byte & (0x80 >> i));
+..\app\temp.c(27): warning:  #188-D: enumerated type mixed with another type
+          TMP_W_SCL(1);
+..\app\temp.c(28): warning:  #188-D: enumerated type mixed with another type
+          TMP_W_SCL(0);
+..\app\temp.c(31): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SCL(1);
+..\app\temp.c(32): warning:  #188-D: enumerated type mixed with another type
+      TMP_W_SCL(0);
+..\app\temp.c: 12 warnings, 0 errors
+compiling oled.c...
+..\app\oled.c(8): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SCL(1);
+..\app\oled.c(9): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SDA(1);
+..\app\oled.c(19): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SDA(1);
+..\app\oled.c(20): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SCL(1);
+..\app\oled.c(21): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SDA(0);
+..\app\oled.c(22): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SCL(0);
+..\app\oled.c(32): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SDA(0);
+..\app\oled.c(33): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SCL(1);
+..\app\oled.c(34): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SDA(1);
+..\app\oled.c(47): warning:  #188-D: enumerated type mixed with another type
+  		OLED_W_SDA(Byte & (0x80 >> i));
+..\app\oled.c(48): warning:  #188-D: enumerated type mixed with another type
+  		OLED_W_SCL(1);
+..\app\oled.c(49): warning:  #188-D: enumerated type mixed with another type
+  		OLED_W_SCL(0);
+..\app\oled.c(51): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SCL(1);	//额外的一个时钟，不处理应答信号
+..\app\oled.c(52): warning:  #188-D: enumerated type mixed with another type
+  	OLED_W_SCL(0);
+..\app\oled.c: 14 warnings, 0 errors
+compiling mathfun.c...
+..\app\mathfun.c(204): warning:  #1-D: last line of file ends without a newline
+  }
+..\app\mathfun.c: 1 warning, 0 errors
+compiling connect.c...
+compiling exit.c...
+..\app\exit.c(26): warning:  #188-D: enumerated type mixed with another type
+          LED_B(1);
+..\app\exit.c(52): warning:  #188-D: enumerated type mixed with another type
+          LED_B(0);
+..\app\exit.c(66): warning:  #188-D: enumerated type mixed with another type
+              LED_R(1);
+..\app\exit.c(71): warning:  #188-D: enumerated type mixed with another type
+              LED_R(0);
+..\app\exit.c: 4 warnings, 0 errors
+compiling sample.c...
+linking...
+Program Size: Code=20698 RO-data=2002 RW-data=92 ZI-data=2260  
+FromELF: creating hex file...
+"ICPT_Rx\ICPT_Rx.axf" - 0 Error(s), 36 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.4.0.pack
+                ARM.CMSIS.5.4.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.1.2
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F3xx_DFP.2.2.2.pack
+                Keil.STM32F3xx_DFP.2.2.2
+                STMicroelectronics STM32F3 Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_ICPT_Rx
+  D:\AppT_1001\keil\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+  D:\AppT_1001\keil\ARM\PACK\Keil\STM32F3xx_DFP\2.2.2\Drivers\CMSIS\Device\ST\STM32F3xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.1.2
+Build Time Elapsed:  00:00:16
+</pre>
+</body>
+</html>
