@@ -122,6 +122,7 @@ int main(void)
   Init_ADC_Data();
   Init_ADC();
   // 初始化 HRTIM
+	HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_MASTER);
   HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_A); // 开启 PWM 计时器
   HAL_HRTIM_WaveformCountStart(&hhrtim1, HRTIM_TIMERID_TIMER_B); 
   INVERT_OFF; // 初始关闭逆变电路输出

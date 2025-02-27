@@ -8,6 +8,8 @@
         "exit.h": "c",
         "connect.h": "c",
         "mathfun.h": "c",
-        "temp.h": "c"
+        "temp.h": "c",
+        "stm32f3xx_hal.h": "c",
+        "stm32f3xx_hal_conf.h": "c"
     }
 }
