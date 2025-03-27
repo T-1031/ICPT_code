@@ -44,19 +44,19 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     }
     else if (GPIO_Pin == KEY2_Pin) // BUZZER
     {
-       static uint8_t on = 0;
-       if (on == 0)
-       {
-            on = 1;
+//       static uint8_t on = 0;
+//       if (on == 0)
+//       {
+//            on = 1;
             INVERT_ON;
             LED_B(1);
-       }
-       else
-       {
-            on = 0;
-            INVERT_OFF;
-            LED_B(0);
-       } 
+//       }
+//       else
+//       {
+//            on = 0;
+//            INVERT_OFF;
+//            LED_B(0);
+//       } 
     }
 }
 
@@ -73,23 +73,23 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
 
 /// @brief USART 接收中断
 /// @param huart 
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if (huart == &huart2)
-    {
-        if (order_hrtim == 0x01)
-        {
-            INVERT_ON;
-            LED_B(1);
-        }
-        else if (order_hrtim == 0x00)
-        {
-            INVERT_OFF;
-            LED_B(0);
-        }
-    }
+// void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+// {
+//     if (huart == &huart2)
+//     {
+//         if (order_hrtim == 0x01)
+//         {
+//             INVERT_ON;
+//             LED_B(1);
+//         }
+//         else if (order_hrtim == 0x00)
+//         {
+//             INVERT_OFF;
+//             LED_B(0);
+//         }
+//     }
     
-}
+// }
 
 /// @brief 定时器中断
 /// @param htim 
