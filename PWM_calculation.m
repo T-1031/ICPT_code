@@ -7,9 +7,11 @@ close all;
 U_DC = 1; % 输入直流信号幅值
 phi = 2.5; % 导通角，取值范围为 (0, 2.93)
 fHRTIM = 144000; % HRTIM 时钟频率 (kHz)
-fHRCK = fHRTIM * 8;
-Period = 10472;
-fPWM = fHRCK / Period; % PWM 频率 (kHz)
+fHRCK = fHRTIM * 4;
+% Period = 10472;
+% fPWM = fHRCK / Period; % PWM 频率 (kHz)
+fPWM = 110;
+Period = round(fHRCK / fPWM);
 T = 1 / fPWM; % PWM 周期
 fDTG = fHRTIM * 8;
 T_dead = 180 / fDTG; % 死区时间 (ms)
@@ -32,7 +34,27 @@ fprintf('CMP4: %d\n', CMP4);
 Fs = 1000; % 采样率 (Hz)
 Ts = 1 / Fs; % 采样周期
 L = 1000; % 信号长度
-t = (0:L-1) * Ts *2 * pi; % (0, 2pi)
+t = (0:L-1) * Ts * 5 * pi; % (0, 2pi)
+
+% PWM 输出信号
+u1 = (mod(t, 2*pi)/2/pi*T > CMP1/Period*T) & (mod(t, 2*pi)/2/pi*T < CMP3/Period*T);
+u2 = (mod(t, 2*pi)/2/pi*T > CMP3/Period*T + T_dead) & (mod(t, 2*pi)/2/pi*T < T);
+u3 = (mod(t, 2*pi)/2/pi*T > CMP2/Period*T) & (mod(t, 2*pi)/2/pi*T < CMP4/Period*T);
+u4 = (mod(t, 2*pi)/2/pi*T < CMP2/Period*T-T_dead) + (mod(t, 2*pi)/2/pi*T > CMP4/Period*T+T_dead);
+
+figure;
+subplot(4, 1, 1);
+plot(t/2/pi*T, u1, 'b', 'LineWidth', 1.5);
+grid on;
+subplot(4, 1, 2);
+plot(t/2/pi*T, u2, 'r', 'LineWidth', 1.5);
+grid on;
+subplot(4, 1, 3);
+plot(t/2/pi*T, u3, 'b', 'LineWidth', 1.5);
+grid on;
+subplot(4, 1, 4);
+plot(t/2/pi*T, u4, 'r', 'LineWidth', 1.5);
+grid on;
 
 % 滤波前输出信号
 u_AB = U_DC * ((mod(t, 2*pi) > CMP1/Period*2*pi) & (mod(t, 2*pi) < CMP2/Period*2*pi-TD)) - ... % 正半周期
@@ -63,16 +85,18 @@ base_amplitude = P1(idx);          % 基波幅值
 base_waveform = base_amplitude * sin(base_frequency * t);
 
 % 绘制基波信号
-figure;
-plot(t, base_waveform, 'r', 'LineWidth', 1.5);
-title('滤波后');
-xlabel('\omega t');
-ylabel('幅值');
-grid on;
-xlim([0, 4*pi]);
+% figure;
+% plot(t, base_waveform, 'r', 'LineWidth', 1.5);
+% title('滤波后');
+% xlabel('\omega t');
+% ylabel('幅值');
+% grid on;
+% xlim([0, 4*pi]);
 
 % 打印信息
 fprintf('PWM 频率：%.3f kHz\n', fPWM);
+fprintf('Period：%d\n', Period);
+fprintf('死区时间：%.8f ms\n', T_dead);
 fprintf('输入幅值：%.2f\n', U_DC);
 fprintf('导通角：%.2f (rad)\n',phi);
 fprintf('输出幅值：%.3f\n', base_amplitude);
