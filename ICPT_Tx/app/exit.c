@@ -44,19 +44,19 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     }
     else if (GPIO_Pin == KEY2_Pin) // BUZZER
     {
-       static uint8_t on = 0;
-       if (on == 0)
-       {
-            on = 1;
+//       static uint8_t on = 0;
+//       if (on == 0)
+//       {
+//            on = 1;
             INVERT_ON;
             LED_B(1);
-       }
-       else
-       {
-            on = 0;
-            INVERT_OFF;
-            LED_B(0);
-       } 
+//       }
+//       else
+//       {
+//            on = 0;
+//            INVERT_OFF;
+//            LED_B(0);
+//       } 
     }
 }
 
